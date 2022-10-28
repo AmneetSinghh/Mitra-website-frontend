@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { Route, useLocation,Routes } from 'react-router-dom';
 import values from 'lodash/values';
 import get from 'lodash/get';
-import EntryPageContainer from '../containers/EntryPage/EntryPageContainer';
 import HomePageContainer from '../containers/Home/HomePageContainer';
 import JobsContainer from '../containers/Jobs/JobsContainer';
 import ProfileContainer from '../containers/Profile/ProfileContainer';
@@ -11,10 +10,6 @@ import LoginContainer from '../containers/Login/LoginContainer';
 import ReferralContainer from '../containers/Referral/ReferralContainer';
 import SignupContainer from '../containers/Signup/SignupContainer';
 import { routeMap, RoutesConts, stacks } from '../constants/RouterConstants';
-
-
-
-
 
 
 
@@ -37,6 +32,7 @@ const AppRoute = () => {
 
   // PREVENT GOING BACK TO ON-BOARDING FROM HOME PAGE
   useEffect(() => {
+    console.log("Every time you login into some page you will get here.");
     // const routeMappingForNewPath = get(routeMap, location.pathname);
     // if (currentPath === Routes.HOME_PAGE && routeMappingForNewPath.stack === stacks.ON_BOARDING) {
     //   if (AuthService.getUserID()) {
@@ -59,8 +55,7 @@ const AppRoute = () => {
 
   return (
     <Routes>
-          <Route path='/' element={<EntryPageContainer />} />
-          <Route path={RoutesConts.SIGNUP} element={<SignupContainer />}/>
+          <Route path='/' element={<SignupContainer />} />
           <Route path={RoutesConts.LOGIN} element={<LoginContainer />} />
           <Route path={RoutesConts.HOME} element={<HomePageContainer />} />
           <Route path={RoutesConts.JOBS} element={<JobsContainer />} />

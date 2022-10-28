@@ -1,6 +1,5 @@
 export const RoutesConts = {
-    ENTRYPAGE: '/',
-    SIGNUP: '/mitra/signup',
+    SIGNUP: '/',
     LOGIN: '/mitra/login',
     HOME: '/mitra/home',
     JOBS: '/mitra/jobs',
@@ -9,9 +8,9 @@ export const RoutesConts = {
     PROFILE: '/mitra/profile',
 };
 
+
 export const stacks = {
     HOME: 'home',
-    SIGNUP: 'singup',
     LOGIN: 'login',
     HOME: 'home',
     JOBS: 'jobs',
@@ -21,10 +20,6 @@ export const stacks = {
 };
 
 export const routeMap = {
-    [RoutesConts.SIGNUP]: {
-      pathname: RoutesConts.SIGNUP,
-      stack: stacks.SIGNUP
-    },
     [RoutesConts.LOGIN]: {
       pathname: RoutesConts.LOGIN,
       stack: stacks.LOGIN
@@ -41,14 +36,22 @@ export const routeMap = {
       pathname: RoutesConts.JOBS_STATUS,
       stack: stacks.JOBS_STATUS
     },
-    [RoutesConts.REFERRAL]: {
-      pathname: RoutesConts.REFERRAL,
-      stack: stacks.REFERRAL
-    },
-    [RoutesConts.PROFILE]: {
-      pathname: RoutesConts.PROFILE,
-      stack: stacks.PROFILE
-    }
-    
-  };
-  
+  [RoutesConts.REFERRAL]: {
+    pathname: RoutesConts.REFERRAL,
+    stack: stacks.REFERRAL
+  },
+  [RoutesConts.PROFILE]: {
+    pathname: RoutesConts.PROFILE,
+    stack: stacks.PROFILE
+  }
+
+};
+
+export const MITRA_APP_BACKEND = {
+  HOST: 'http://localhost:5000',
+  REGISTER_USER: '/register/user',
+  SEND_OTP : '/send/opt',
+  LOGIN_USER : '/login/user',
+  SESSION_STATUS : '/get/session'
+
+}
