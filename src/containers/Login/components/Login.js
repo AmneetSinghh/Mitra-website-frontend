@@ -103,9 +103,9 @@ const Login = () => {
                     userid: userid
                 });
             if (response.status === 'success') {
-                const homeUrl = RoutesConts.HOME + '?userId=' + userid;
-                console.log(homeUrl);
-                history(homeUrl)
+                const jobsUrl = RoutesConts.JOBS + '?userId=' + userid;
+                console.log(jobsUrl);
+                history(jobsUrl)
             }
         }
     }
@@ -137,7 +137,7 @@ const Login = () => {
                         <p className='mt-3'>Already Have an Account <span>SignIn</span> </p>
                         
                         {isUserLogin === true && (
-                            <span><NavLink to="/mitra/home">Go to Home</NavLink></span>
+                            <span><NavLink to="/mitra/jobs">Go to Home</NavLink></span>
                         )}
                     </div>
                     <Card variant="outlined">

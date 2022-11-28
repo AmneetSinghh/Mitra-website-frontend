@@ -52,6 +52,15 @@ export const MITRA_APP_BACKEND = {
   REGISTER_USER: '/register/user',
   SEND_OTP : '/send/opt',
   LOGIN_USER : '/login/user',
-  SESSION_STATUS : '/get/session'
-
+  SESSION_STATUS : '/get/session',
+  NOT_APPLIED_JOBS: '/get/notAppliedJobs',
+  APPLY_JOB: '/apply/job',
+  GET_JOBS_STATUS : '/get/jobStatus',
+  REFER_A_FRIEND : '/refer',
+  USER_PROFILE : '/profile/userDetails',
+  UPDATE_USER_PROFILE : '/profile/update',
+  PROFILE_LOGOUT : '/profile/logout',
+  GET_CITIES : '/get/cities',
+  SAVE_PROFILE_DETAILS: '/profile/update',
+  PROFILE_LOGOUT:'/profile/logout',
 }
